@@ -84,6 +84,20 @@ class ProdutosTable extends Table
             ->requirePresence('descricao_produto', 'create')
             ->notEmptyString('descricao_produto');
 
+        $validator
+            ->allowEmptyFile('image')
+            ->add('image',[
+                'mimeType' =>[
+                    'rule'=> ['mimeType',['image/jpg','image/png','image/jpeg']],
+                    'message'=> 'Please upload only jpg and png.',
+                ],
+                'fileSize'=>[
+                    'rule'=>['fileSize','<=','1MB'],
+                    'message'=>'Tamanho de imagem não suportado, precisa ser menor que 1MB',
+                ],
+
+            ]);
+
         return $validator;
     }
 

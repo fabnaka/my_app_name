@@ -27,6 +27,7 @@
                     echo $this->Form->control('marca_produto');
                     echo $this->Form->control('preco_produto');
                     echo $this->Form->control('descricao_produto');
+                    echo $this->Form->control('image');
                 ?>
             </fieldset>
             <?= $this->Form->button(__('Submit')) ?>

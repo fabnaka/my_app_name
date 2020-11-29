@@ -13,7 +13,7 @@
     </aside>
     <div class="column-responsive column-80">
         <div class="produtos form content">
-            <?= $this->Form->create($produto) ?>
+            <?= $this->Form->create($produto,['type'=>'file']) ?>
             <fieldset>
                 <legend><?= __('Add Produto') ?></legend>
                 <?php
@@ -22,6 +22,7 @@
                     echo $this->Form->control('marca_produto');
                     echo $this->Form->control('preco_produto');
                     echo $this->Form->control('descricao_produto');
+                    echo $this->Form->control('image_file', ['type'=>'file']);
                 ?>
             </fieldset>
             <?= $this->Form->button(__('Submit')) ?>

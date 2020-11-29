@@ -1,8 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Controller\Admin;
-use App\Controller\AppController;
+namespace App\Controller;
 
 /**
  * Produtos Controller
@@ -53,23 +52,6 @@ class ProdutosController extends AppController
         $produto = $this->Produtos->newEmptyEntity();
         if ($this->request->is('post')) {
             $produto = $this->Produtos->patchEntity($produto, $this->request->getData());
-
-            if(!$produto->getErrors){
-                $image = $this ->request->getData('image_file');
-
-                $name = $image ->getClientFilename();
-            
-                $targetPath = WWW_ROOT.'img'.DS.$name;
-
-                if($name){
-                    $image->moveTo($targetPath);
-                }
-                
-                $produto->image = $name;
-
-            }
-
-            
             if ($this->Produtos->save($produto)) {
                 $this->Flash->success(__('The produto has been saved.'));
 

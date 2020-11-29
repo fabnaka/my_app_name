@@ -17,6 +17,7 @@
                     <th><?= $this->Paginator->sort('marca_produto') ?></th>
                     <th><?= $this->Paginator->sort('preco_produto') ?></th>
                     <th><?= $this->Paginator->sort('descricao_produto') ?></th>
+                    <th><?= $this->Paginator->sort('image') ?></th>
                     <th class="actions"><?= __('Actions') ?></th>
                 </tr>
             </thead>
@@ -25,10 +26,11 @@
                 <tr>
                     <td><?= $this->Number->format($produto->id) ?></td>
                     <td><?= h($produto->nome_produto) ?></td>
-                    <td><?= $produto->has('categorias_produto') ? $this->Html->link($produto->categorias_produto->id, ['controller' => 'CategoriasProdutos', 'action' => 'view', $produto->categorias_produto->id]) : '' ?></td>
+                    <td><?= $produto->has('categorias_produto') ? $this->Html->link($produto->categorias_produto->nome_categoria, ['controller' => 'CategoriasProdutos', 'action' => 'view', $produto->categorias_produto->id]) : '' ?></td>
                     <td><?= h($produto->marca_produto) ?></td>
                     <td><?= $this->Number->format($produto->preco_produto) ?></td>
                     <td><?= h($produto->descricao_produto) ?></td>
+                    <td><?= @$this->Html->image($produto->image) ?></td>
                     <td class="actions">
                         <?= $this->Html->link(__('View'), ['action' => 'view', $produto->id]) ?>
                         <?= $this->Html->link(__('Edit'), ['action' => 'edit', $produto->id]) ?>

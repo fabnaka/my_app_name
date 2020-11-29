@@ -1,0 +1,8 @@
+.img-logo{
+	height: 40px;
+	width: 132px;
+	display: block;
+	background: url(../img/logo.svg)no-repeat;
+	background-size: contain;
+	color: transparent;
+}

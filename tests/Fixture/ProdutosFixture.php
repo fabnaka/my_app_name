@@ -23,6 +23,7 @@ class ProdutosFixture extends TestFixture
         'marca_produto' => ['type' => 'string', 'length' => 255, 'null' => false, 'default' => null, 'collate' => 'utf8mb4_general_ci', 'comment' => '', 'precision' => null],
         'preco_produto' => ['type' => 'float', 'length' => null, 'precision' => null, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => ''],
         'descricao_produto' => ['type' => 'string', 'length' => 255, 'null' => false, 'default' => null, 'collate' => 'utf8mb4_general_ci', 'comment' => '', 'precision' => null],
+        'image' => ['type' => 'string', 'length' => 255, 'null' => false, 'default' => null, 'collate' => 'utf8mb4_general_ci', 'comment' => '', 'precision' => null],
         '_constraints' => [
             'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
         ],
@@ -47,6 +48,7 @@ class ProdutosFixture extends TestFixture
                 'marca_produto' => 'Lorem ipsum dolor sit amet',
                 'preco_produto' => 1,
                 'descricao_produto' => 'Lorem ipsum dolor sit amet',
+                'image' => 'Lorem ipsum dolor sit amet',
             ],
         ];
         parent::init();

@@ -14,6 +14,7 @@ use Cake\ORM\Entity;
  * @property string $marca_produto
  * @property float $preco_produto
  * @property string $descricao_produto
+ * @property string $image
  *
  * @property \App\Model\Entity\CategoriasProduto $categorias_produto
  */
@@ -34,6 +35,7 @@ class Produto extends Entity
         'marca_produto' => true,
         'preco_produto' => true,
         'descricao_produto' => true,
+        'image' => true,
         'categorias_produto' => true,
     ];
 }

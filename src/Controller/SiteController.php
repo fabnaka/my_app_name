@@ -5,7 +5,7 @@ namespace App\Controller;
 use App\Controller\AppController;
 use Cake\Event\EventInterface;
 
-class HomeController extends AppController{
+class SiteController extends AppController{
 
     public function beforeFilter(EventInterface $event)
     {
@@ -14,6 +14,7 @@ class HomeController extends AppController{
     }
 
     public function index(){
+        $this->viewBuilder() -> setLayout('site');
 
     }
 }

@@ -24,7 +24,7 @@
                 </tr>
                 <tr>
                     <th><?= __('Categorias Produto') ?></th>
-                    <td><?= $produto->has('categorias_produto') ? $this->Html->link($produto->categorias_produto->id, ['controller' => 'CategoriasProdutos', 'action' => 'view', $produto->categorias_produto->id]) : '' ?></td>
+                    <td><?= $produto->has('categorias_produto') ? $this->Html->link($produto->categorias_produto->nome_categoria, ['controller' => 'CategoriasProdutos', 'action' => 'view', $produto->categorias_produto->id]) : '' ?></td>
                 </tr>
                 <tr>
                     <th><?= __('Marca Produto') ?></th>
@@ -33,6 +33,10 @@
                 <tr>
                     <th><?= __('Descricao Produto') ?></th>
                     <td><?= h($produto->descricao_produto) ?></td>
+                </tr>
+                <tr>
+                    <th><?= __('Image') ?></th>
+                    <td><?= h($produto->image) ?></td>
                 </tr>
                 <tr>
                     <th><?= __('Id') ?></th>

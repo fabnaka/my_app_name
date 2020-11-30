@@ -16,5 +16,11 @@ class SiteController extends AppController{
     public function index(){
         $this->viewBuilder() -> setLayout('site');
 
+        $this ->loadModel('Produtos');
+        
+        $produtos = $this->Produtos->find('all')->limit(4);
+
+        $this ->set('produtos',$produtos);
+
     }
 }

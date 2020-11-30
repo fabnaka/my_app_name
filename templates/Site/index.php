@@ -1,5 +1,11 @@
-<?php echo $this->Html->css('site'); 
+<?php 
+
+
+
+echo $this->Html->css('site'); 
  ?>
+
+
 
 <!doctype html>
 <html lang="pt-br">
@@ -10,10 +16,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="./resources/css/header.css">
-    <link rel="stylesheet" type="text/css" href="./resources/css/home.css">
-    <link rel="stylesheet" type="text/css" href="./resources/css/footer.css">
-
+  
     <title>Sua loja de importados</title>
     <link rel="icon" href="resources/img/favicon.png">
   </head>
@@ -32,19 +35,19 @@
         <h4>destaque:</h4>
       </div>
 
-      <div class="grid container" >
-      
-        <item-card class="grid-item" href="description.html" title="iphone xr black" image="./_assets/iphone-xr-black.png" price="R$3,799.90"> 
-        </item-card>
+      <div class="container grid grid-template-columns-3" >
 
-        <item-card class="grid-item" title="Macbook Air 13" image="./_assets/macbook.png" price="R$9,299.90"> 
-        </item-card>
+        <?php foreach($produtos as $produto): ?>
+          <div class="card" id="card">
+            <div class="card-body">
+              <?= @$this->Html->image($produto->image) ?>
+              <h5> <?=$produto->nome_produto?> </h5>
+              <a href="#" class="card-link">Another link</a>
+            </div>
+          </div>
+        <?php endforeach?>
+        
 
-        <item-card class="grid-item" title="Beats Studio 3" image="./_assets/beats-headphones.png" price="R$1,479.90"> 
-        </item-card>
-
-        <item-card class="grid-item" title='Smart TV 4K 55"' image="./_assets/smart-tv.png" price="R$2,379.90"> 
-        </item-card>
       </div> 
 
     </div>
@@ -59,3 +62,4 @@
   </body>
 
 </html>
+

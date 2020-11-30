@@ -24,6 +24,7 @@ class ProdutosController extends AppController
         $produtos = $this->paginate($this->Produtos);
 
         $this->set(compact('produtos'));
+
     }
 
     /**

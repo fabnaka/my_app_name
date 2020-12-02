@@ -22,5 +22,16 @@ class SiteController extends AppController{
 
         $this ->set('produtos',$produtos);
 
+
     }
+
+    public function descricao($id){
+
+        $this->viewBuilder() -> setLayout('site');
+
+        $this ->loadModel('Produtos');
+        $produto = $this ->Produtos->get($id);
+        $this ->set('produto',$produto);
+    }
+
 }

@@ -12,7 +12,7 @@
       <div class="container">
 
         <!--Logo-->
-        <a class="navbar-brand col-md-3" href="index.html">
+        <a class="navbar-brand col-md-3" href=<?= $this->Url->build(['controller'=>'Site','action'=>'index']) ?>>
           <span class="img-logo">PW store</span>
         </a>
 
@@ -61,19 +61,20 @@
                 </a>
 
               </li>
+
+
               <li class="nav-item dropdown active">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 
                   <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-tags" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" d="M3 2v4.586l7 7L14.586 9l-7-7H3zM2 2a1 1 0 0 1 1-1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 2 6.586V2z"/>
                     <path fill-rule="evenodd" d="M5.5 5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zm0 1a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
                     <path d="M1 7.086a1 1 0 0 0 .293.707L8.75 15.25l-.043.043a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 0 7.586V3a1 1 0 0 1 1-1v5.086z"/>
                   </svg>
-
-
                   Categoria
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a/>
+                
+                <div class="dropdown-menu">
                   <a class="dropdown-item" href="category.html">Celulares</a>
                   <a class="dropdown-item" href="#">Computadores</a>
                   <a class="dropdown-item" href="#">Televisores</a>
@@ -82,6 +83,7 @@
                   <a class="dropdown-item" href="#">Todos os produtos</a>
                 </div>  
               </li>
+
             </ul>
           <!--   </div> -->  <!--Menus-->
         </div>      

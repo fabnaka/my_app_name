@@ -1,0 +1,8 @@
+#image-descricao {
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}

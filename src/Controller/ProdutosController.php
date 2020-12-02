@@ -25,6 +25,8 @@ class ProdutosController extends AppController
 
         $this->set(compact('produtos'));
 
+
+
     }
 
     /**

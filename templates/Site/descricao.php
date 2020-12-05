@@ -32,13 +32,7 @@ echo $this->Html->css('descricao');
           
           
           <div class="resumo-produto" style="text-align: justify; margin-top: 30px">
-              Vidro frontal mais resistente e molduras em alumínio aeroespacial
-              Nova tela do iPhone XRde 6.1” é a mais avançada LCD da indústria
-              Com conectividade 4G e Wi-Fi
-              Câmera traseira de 12MP e frontal de 7MP
-
-
-
+              
 
           </div>          
           

@@ -18,7 +18,7 @@
   <body>
     
     <!-- navbar da pasta element -->
-    <?= $this ->element('navbar') ?>
+    <?php echo $this ->element('navbar', array('categorias'=>$categorias)) ?>
 
     <!-- Conteúdo da página -->
     <?= $this->fetch('content');?>

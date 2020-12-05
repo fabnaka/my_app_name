@@ -20,9 +20,8 @@ echo $this->Html->css('site');
   <body>
 
     <div id="product-display">
-      <div class="gambi container"></div>
       
-      <div id="showcase" class="container">
+      <div class="container">
         <h1>PWstore</h1>
         <h3>-os melhores eletrônicos para o seu dia-a-dia</h3>
         <h3>-variedades e lançamentos com preços amigáveis</h3>
@@ -43,8 +42,6 @@ echo $this->Html->css('site');
             </div>
           </div>
         <?php endforeach?>
-        
-
       </div> 
 
     </div>

@@ -75,12 +75,13 @@
                 <a/>
                 
                 <div class="dropdown-menu">
-                  <a class="dropdown-item" href="category.html">Celulares</a>
-                  <a class="dropdown-item" href="#">Computadores</a>
-                  <a class="dropdown-item" href="#">Televisores</a>
-                  <a class="dropdown-item" href="#">Diversos</a>
+                  <?php foreach($categorias as $categoria): ?>
+                    <a class="dropdown-item" href="<?= $this->Url->build(['controller'=>'Site','action'=>'categoria', $categoria->id]) ?>"><?=$categoria->nome_categoria?></a>
+                  <?php endforeach?>
+                  <!--
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item" href="#">Todos os produtos</a>
+                  -->
                 </div>  
               </li>
 

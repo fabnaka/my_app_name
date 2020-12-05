@@ -18,10 +18,11 @@ class CategoriasProdutosController extends AppController
      */
     public function index()
     {   
-        $this->loadModel('CategoriasProdutos');
+        
         $categoriasProdutos = $this->paginate($this->CategoriasProdutos);
 
         $this->set(compact('categoriasProdutos'));
+
         
         
         
